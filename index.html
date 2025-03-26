@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T-Qyron Support</title>
+  <style>
+    :root {
+      --bg-color: #1c1c1c;
+      --text-color: #efcf7b;
+      --accent-color: #b48df2;
+      --link-color: #78b9ff;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-family);
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .logo {
+      width: 100%;
+      max-width: 600px;
+      animation: dropIn 1.6s cubic-bezier(0.2, 0.7, 0.1, 1.2) forwards;
+    }
+    .shadow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 400px;
+      height: 40px;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, transparent 80%);
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      animation: shadowFade 1s 1.4s forwards;
+    }
+    .text {
+      font-size: 1.6rem;
+      color: var(--accent-color);
+      margin-top: 20px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s 2.2s forwards;
+    }
+    .text a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    @keyframes dropIn {
+      0% {
+        transform: translateY(-200%) scale(1.2);
+      }
+      80% {
+        transform: translateY(30%) scale(0.98);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+    @keyframes shadowFade {
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://raw.githubusercontent.com/TQyronStudio/Support/main/T-Qyron_Studio_4096x2304.jpeg" alt="T-Qyron Studio Logo" class="logo" />
+  <div class="shadow"></div>
+  <div class="text">
+    Need help or have a question?<br />
+    Contact us at <a href="mailto:tqyron.studio@gmail.com">tqyron.studio@gmail.com</a>
+  </div>
+</body>
+</html>
